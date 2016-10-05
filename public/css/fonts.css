@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Amethysta';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Amethysta'), local('Amethysta'), url(../fonts/Amethysta/Amethysta-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Philosopher'), local('Philosopher'), url(../fonts/Philosopher/Philosopher-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Syncopate';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Syncopate'), local('Syncopate'), url(../fonts/Syncopate/Syncopate-Regular.ttf) format('truetype');
+}

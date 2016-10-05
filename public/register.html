@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Register - SNU Fantasy Football</title>
+	</head>
+	<style>
+		html{background:url("wallpaper.png");}
+		body{margin:0 10px; color:#dfdfdf;font-size:18px;}
+		a:link,a:visited,a:active{
+		color:yellow;}
+	</style>
+	<body>
+	<center><img src="snuLogo.png"></center>
+		<center><h1 style="text-shadow:0 0 8px #dfdfdf;font-size:40px;">REGISTRATION - FANTASY FOOTBALL</h1></center>
+		<p>Register below to play SNU Fantasy Football Manager! Matchday 1 kicks of at 6:30 pm in the evening, so make sure you're registered before then and have picked a team.</p>
+		<h2 style="font-size:27px;">Points to keep in mind:</h2>
+		<ul>
+		<li>It is mandatory to fill all fields. Doing so might not guarantee registration.</li>
+		<li>Please fill out your correct SNU Net ID, without the '@snu.edu.in' domain name extension.</li>
+		<li>On clicking 'SEND PASSWORD', a 6-character password will be sent to your e-mail ID and will be set as your default password. You can then log in <a href="index.php">here</a>.<br>Password can be changed once you've logged in.</li>
+		</ul>
+		<form action="registerSetup.php" method="POST">
+			
+			<p><b>Name : </b><input required type="text" name="Name" size="50"><br><br>
+			<b>SNU NetID : </b><input required type="text" name="username" size="20">@snu.edu.in<br><br>
+			<input type="submit" value="SEND PASSWORD">
+		</form>
+	</body>
+<html>

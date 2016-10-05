@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>GAME INFO - Fantasy Football League</title>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/fonts.css"/>
+	<style>
+		
+		html,body{
+			background: url("wallpaper.png");
+			color:#dfdfdf;
+			min-height:100%;
+			padding:0;
+			margin:0px 10px;
+			position:relative;
+			}
+		#header{
+			color:white;
+			
+			font: 20px Syncopate;			
+			position:relative;
+			top:0px;
+			width:100%;
+		}
+		a:visited, a:link, a:active
+		{
+			text-decoration: none;
+			color:#DFDFDF;
+			padding:0px 10px 0px 10px;
+			margin:0px 20px 0px 20px;
+		}
+		a:hover
+		{
+			text-shadow:0 0 8px #ffffff;
+			color:white;
+		}
+		
+		#logout:hover{
+			text-shadow:0 0 8px red;
+			color:#ffeeee;
+		}
+		.headerElement{
+			display:inline;	
+		}
+		td{padding:2px 5px 2px 5px;color:#dfdfdf;font:18px Amethysta;}
+
+	</style>
+	<body>
+	<center><div id="header">
+		<center><img src="snuLogo.png"></center>
+		
+			<a href="home.php" class="headerElement">HOME</a>
+			<a href="#" class="headerElement">POINTS</a>
+			<a href="team.php" class="headerElement">MY TEAM</a>
+			<a href="#" class="headerElement">HOW TO PLAY</a>
+			<a href="#" class="headerElement">ABOUT US</a>
+		</div></center>
+		<br><br>
+		
+		<center><span style="font:40px Philosopher;color:#dfdfdf;text-shadow:0 0 8px #dfdfdf;">HOW TO PLAY</span><br><br></center>
+		<div style="width:90%;"><span style="font:30px Amethysta;color:#dfdfdf;">IMPORTANT : Use Google Chrome only!</span>
+		<p style="font:20px Amethysta; color:#dfdfdf;">Due to various constraints, this web app has been optimized only for Google Chrome, and running it on any other browser(don't even try Internet Explorer) may cause it to misbehave.</p>
+		<p style="font:20px Amethysta; color:#dfdfdf;">This is the official online fantasy football manager web app for SNU Football League 2013, belonging to the Sports Committee of Shiv Nadar University. Rules, regulations and prizes can be changed without prior notice, and no disputes regarding such shall be entertained. The following is a brief idea of playing Fantasy Football Manager 2013.</p>
+		<ul>
+			<li style="font:20px Amethysta; color:#dfdfdf;">All the basic pages can be navigated from the bar at the top of each page, as can be seen on this page as well.</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">Users, after logging in, are redirected to the HOME page by default, where they an view the tournament calendar as well as various Fantasy statistics.</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">You can assign your team name and change your password from the ACCOUNT section of the bar.</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">Once teams are locked, the POINTS page will be activated and all the points gained by your team will be displayed there.</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">First time users can pick their team by clicking on the MY TEAM section of the navigation bar, while all subsequent visits to the page displays the user's team as well as giving the user an option to pick his/her team again, provided the teams are not locked during matchday.</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">The user has 100 points to pick a team of seven players (1 Goalie, 2 Defensive players, 4 Offensive Players)</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">A captain, also has to be selected among the 7 players. <b style="text-shadow:0 0 5px #dfdfdf;">The captain fetches twice as many points</b>.</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">The points and leaderboard will be frequently updated to reflect performances of players after each matchday. <b style="text-shadow:0 0 5px #dfdfdf;">If points of two managers are equal, the team selected with fewer points is ranked higher.</b> So don't feel forced to spend all 100 points!</li>
+			<li style="font:20px Amethysta; color:#dfdfdf;">Teams will be locked after matchday 1, and will be reponed for squad overhauling twice- once during the Diwali break, and once after the group stages are concluded.</li>
+		</ul>
+		<center><table border="1">
+			<tr>
+				<th colspan="2" style="font-size:28px;text-shadow:0 0 5px #dfdfdf;padding-bottom:5px;padding-top:5px;" align="center">POINTS SCHEME</th>
+			</tr>
+			<tr>
+				<td>10-20 Minutes</td><td>1</td>
+			</tr>
+			<tr>
+				<td>20-30 Minutes</td><td>2</td>
+			</tr>
+			<tr>
+				<td>30 Minutes +</td><td>3</td>
+			</tr>
+			<tr>
+				<td>Goal by Att</td><td>5</td>
+			</tr>
+			<tr>
+				<td>Goal by Def</td><td>7</td>
+			</tr>
+			<tr>
+				<td>Goal by GK</td><td>8</td>
+			</tr>
+			<tr>
+				<td>Assist by Att</td><td>3</td>
+			</tr>
+			<tr>
+				<td>Assist by Def/GK</td><td>4</td>
+			</tr>
+			<tr>
+				<td>Clean Sheet by GK</td><td>4</td>
+			</tr>
+			<tr>
+				<td>Clean Sheet by Def</td><td>2</td>
+			</tr>
+			<tr>
+				<td>Clean Sheet by Att</td><td>1</td>
+			</tr>
+			<tr>
+				<td>2 Goals conceded by GK/Def</td><td>-1</td>
+			</tr>
+			<tr>
+				<td>3 Saves</td><td>1</td>
+			</tr>
+			<tr>
+				<td>Penalty Save</td><td>5</td>
+			</tr>
+			<tr>
+				<td>Penalty Miss</td><td>-2</td>
+			</tr>
+			<tr>
+				<td>Man Of The Match Bonus</td><td>3</td>
+			</tr>
+			<tr>
+				<td>Yellow Card</td><td>-1</td>
+			</tr>
+			<tr>
+				<td>Red Card</td><td>-3</td>
+			</tr>
+			<tr>
+				<td>Own Goal</td><td>-2</td>
+			</tr>
+			<tr>
+				<td>5 Tackles/Interceptions</td><td>1</td>
+			</tr>
+			<tr>
+				<td>Players of Winning Side</td><td>1</td>
+			</tr>
+			<tr>
+				<td>Captain of Winning Side</td><td>1</td>
+			</tr>
+			<tr>
+				<td>Captain of Losing Side</td><td>-1</td>
+			</tr>
+			
+		</table></center>
+		<br>
+		<center style="font: bold small-caps 25px Amethysta;">You can now play 'Fantasy Football Manager'!<a href="team.php">START HERE</a></center>
+		<br><br><br><br>
+		</div>
+	</body>
+<html>
